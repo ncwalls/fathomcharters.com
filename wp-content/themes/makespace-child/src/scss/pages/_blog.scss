@@ -1,0 +1,54 @@
+.blog {
+
+}
+
+.archive-list{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 3rem;
+	grid-row-gap: 6rem;
+	
+	@media (max-width: $phablet) {
+		grid-template-columns: 1fr;
+	}
+	
+	.post-thumbnail{
+		width: 100%;
+		
+		.img{
+			background: no-repeat center center;
+			background-size: cover;
+			display: block;
+			height: 0;
+			padding-bottom: 67%;
+			width: 100%;
+		}
+	}
+}
+
+.archive-pagination{
+	text-align: center;
+
+	.pagination-links{
+		display: inline-block;
+		white-space: nowrap;
+	}
+	
+	.page-numbers{
+		line-height: 1;
+		margin: 0 0.5rem;
+		vertical-align: middle;
+
+		&.current{
+			
+		}
+		
+		&.prev{
+			margin: 0 2rem 0 0;
+		}
+		
+		&.next{
+			margin: 0 0 0 2rem;
+		}
+	}
+}

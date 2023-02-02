@@ -1,0 +1,611 @@
+
+@import "./wp-content/plugins/msw-events/css/msw-events";
+
+// .post-type-archive-msw_events {
+
+// }
+
+// .msw-calendar-controls{
+// 	display: flex;
+// 	align-items: center;
+// 	// gap: 3rem;
+// 	// justify-content: flex-end;
+// 	justify-content: space-between;
+// 	margin: 3rem 0 4.5rem 0;
+// 	width: 100%;
+	
+// 	@media (max-width: $tablet) {
+// 		// gap: 2.5rem;
+// 	}
+	
+// 	.filter-container{
+// 		flex: 1;
+// 		margin: 0 0 0 3rem;
+// 		max-width: 46rem;
+		
+// 		@media (max-width: $tablet) {
+// 			margin-left: 2.5rem;
+// 		}
+
+// 		.filter-dropdown{
+// 			width: 100%;
+// 		}
+// 	}
+// }
+
+
+// .msw-calendar-views-nav{
+// 	display: flex;
+// 	align-items: center;
+// 	font-size: 2.6rem;
+// 	justify-content: flex-end;
+// 	margin: 4rem 0 2rem 0;
+// 	line-height: 1;
+	
+// 	@media (max-width: $desktop) {
+// 		// font-size: 2.3rem;
+// 	}
+// 	@media (max-width: $laptop) {
+// 		font-size: 2.3rem;
+// 	}
+// 	@media (max-width: $tablet) {
+// 		font-size: 2rem;
+// 	}
+
+// 	a{
+// 		color: #fff;
+// 		display: inline-block;
+// 		margin-left: 1rem;
+
+// 		&:hover{
+// 		}
+
+// 		&.active{
+// 			opacity: 0.23;
+// 			cursor: default;
+			
+// 			&:hover{
+// 				color: #fff;
+// 			}
+// 		}
+
+// 	}
+
+// 	.month-view-link{
+
+// 	}
+// 	.month-view-link{
+
+// 	}
+// }
+
+// .msw-calendar{
+// 	// margin-top: 4rem;
+// }
+
+// .no-events-message{
+// 	background: $brand-red;
+// 	color: #fff;
+// 	font-weight: 700;
+// 	line-height: 1.1;
+// 	margin: -2rem 0 3rem 0;
+// 	padding: 1.5rem 2rem;
+// 	text-align: center;
+	
+// 	@media (max-width: $tablet) {
+// 		font-size: 1.8rem;
+// 	}
+// }
+
+// .msw-calendar-header{
+// 	display: flex;
+// 	align-items: center;
+// 	gap: 3rem;
+// 	justify-content: space-between;
+// 	margin-bottom: 3rem;
+// 	overflow: hidden;
+// 	padding: 5rem 3rem;
+	
+// 	@media (max-width: $laptop) {
+// 		// gap: 2rem;
+// 		padding-right: 1.5rem;
+// 		padding-left: 1.5rem;
+// 	}
+// 	@media (max-width: $tablet) {
+// 		align-items: center;
+// 		// display: block;
+// 		padding: 3rem 1.5rem;
+// 	}
+
+// 	.center{
+// 		// display: flex;
+// 		// flex-wrap: wrap;
+// 		// gap: 3rem;
+// 		// justify-content: space-between;
+// 		order: 2;
+// 		text-align: center;
+// 	}
+
+// 	.msw-calendar-title{
+// 		display: inline-block;
+// 		font-family: $font-family-callout;
+// 		font-size: 3.6rem;
+// 		font-weight: 400;
+// 		line-height: 1;
+// 		margin: 0;
+// 		text-transform: uppercase;
+// 		vertical-align: bottom;
+		
+// 		@media (max-width: $desktop) {
+// 			font-size: 3.4rem;
+// 		}
+// 		@media (max-width: $laptop) {
+// 		}
+// 		@media (max-width: $tablet) {
+// 			display: block;
+// 			font-size: 2.8rem;
+// 		}
+// 		@media (max-width: $phablet) {
+// 			font-size: 2.2rem;
+
+// 			.year{
+// 				display: block;
+// 				font-size: 0.7em;
+// 			}
+// 		}
+// 	}
+
+// 	.msw-calendar-nav-link{
+// 		// color: #fff;
+// 		font-family: $font-family-callout;
+// 		font-size: 2.3rem;
+// 		font-weight: 400;
+// 		line-height: 1;
+// 		text-decoration: none;
+// 		text-transform: uppercase;
+		
+// 		@media (max-width: $desktop) {
+// 			font-size: 2.1rem;
+// 		}
+// 		@media (max-width: $laptop) {
+// 			font-size: 1.8rem;
+// 		}
+// 		@media (max-width: $tablet) {
+// 			display: block;
+// 		}
+
+// 		span{
+// 			@media (max-width: $laptop) {
+// 				display: block;	
+// 			}
+// 			@media (max-width: $tablet) {
+// 				display: none;
+// 			}
+// 		}
+
+// 		.arrow{
+// 			display: none;
+		
+// 			@media (max-width: $tablet) {
+// 				display: block;
+// 				font-size: 3rem;
+// 				font-weight: 300;
+// 			}
+// 		}
+
+// 		&:hover{
+// 			// color: $brand-green;
+// 		}
+// 	}
+
+// 	.msw-calendar-prev-month{
+// 		order: 1;
+		
+// 		@media (max-width: $tablet) {
+// 			float: left;
+// 		}
+
+// 	}
+	
+// 	.msw-calendar-next-month{
+// 		order: 3;
+// 		text-align: right;
+		
+// 		@media (max-width: $tablet) {
+// 			float: right;
+// 		}
+// 	}
+// }
+
+// .msw-calendar-table{
+// 	display: block;
+// 	margin: 0;
+
+// 	thead{
+// 		display: block;
+			
+// 		@media (max-width: $tablet) {
+// 			display: none;
+// 		}
+// 	}
+
+// 	.calendar-weekday-heading{
+// 		font-size: 1.8rem;
+// 		font-weight: 400;
+// 		letter-spacing: 0.1rem;
+// 		padding-bottom: 1rem;
+// 		text-transform: uppercase;
+		
+// 		@media (max-width: $laptop) {
+// 			font-size: 1.6rem;
+// 		}
+// 	}
+
+// 	tbody{
+// 		display: grid;
+// 		grid-template-columns: 1fr;
+// 		grid-row-gap: 3.5rem;
+		
+// 		@media (max-width: $desktop) {
+// 			grid-row-gap: 3rem;
+// 		}
+// 		@media (max-width: $laptop) {
+// 			grid-row-gap: 2rem;
+// 		}
+// 		@media (max-width: $tablet) {
+// 			display: block;
+// 		}
+// 	}
+
+// 	.calendar-row{
+// 		display: grid;
+// 		grid-template-columns: repeat( 7, 1fr);
+// 		grid-column-gap: 2.5%;
+		
+// 		@media (max-width: $tablet) {
+// 			grid-template-columns: 1fr;
+// 			grid-column-gap: 0;
+// 		}
+// 	}
+
+// 	.calendar-day{
+// 		background: none;
+// 		border: 1px solid $brand-black;
+// 		color: $brand-black;
+// 		display: block;
+// 		font-size: 1.2rem;
+// 		font-weight: 700;
+// 		line-height: 1;
+// 		min-height: 17.5rem;
+// 		padding: 1.5rem 1.3rem 2rem 1.3rem;
+		
+// 		@media (max-width: $tablet) {
+// 			display: none;
+// 			font-size: 1.3rem;
+// 			margin-bottom: 1rem;
+// 			min-height: 0;
+// 			padding: 1.5rem;
+// 		}
+
+// 		&.has-events{
+// 			display: block;
+// 		}
+
+// 		&.current-month{
+// 			background: $brand-grey;
+// 		}
+// 		&.other-month{
+// 			// border: 1px solid $brand-grey;
+// 			// opacity: 0.6;
+			
+// 			@media (max-width: $tablet) {
+// 				display: none;
+// 			}
+// 		}
+// 	}
+
+// 	.day-inner{
+// 		display: flex;
+// 		flex-direction: column;
+// 		justify-content: space-between;
+// 		height: 100%;
+// 	}
+
+// 	.day-header{
+// 		@media (max-width: $tablet) {
+// 			display: flex;
+// 			justify-content: space-between;
+// 			margin-bottom: 1rem;
+// 		}
+
+// 	}
+
+// 	.day-number{
+		
+// 		@media (max-width: $tablet) {
+// 			font-size: 1.4rem;
+// 		}
+// 	}
+
+// 	.day-name{
+// 		display: none;
+		
+// 		@media (max-width: $tablet) {
+// 			display: block;
+// 		}
+// 	}
+
+// 	.day-events{
+// 	}
+// 	.day-event{
+// 		// margin: 1.5rem 0 0 0;
+// 		margin: 0;
+// 		position: relative;
+
+// 		&:hover{
+// 		}
+// 	}
+
+// 	.event-link{
+// 		// background: $brand-grey;
+// 		// border-radius: 0.2rem;
+// 		// color: $brand-black;
+// 		display: block;
+// 		line-height: 1.1;
+// 		// padding: 0.5rem;
+// 		margin-top: 0.5rem;
+// 		padding-top: 1rem;
+// 		position: relative;
+// 		text-decoration: none;
+		
+// 		@media (max-width: $tablet) {
+// 			display: inline-block;
+// 			font-size: 1.6rem;
+// 		}
+
+
+// 		.event-info-popup{
+// 			background: #fff;
+// 			box-shadow: 0 0.4rem 0.8rem rgba(#000,0.1);
+// 			display: none;
+// 			font-size: 1.3rem;
+// 			padding: 1.5rem 1.5rem 2rem 1.5rem;
+// 			position: absolute;
+// 			bottom: 100%;
+// 			left: 50%;
+// 			width: 20rem;
+// 			transform: translateY(0) translateX(-50%);
+			
+// 			@media (max-width: $tablet) {
+// 				left: 0;
+// 				transform: none;
+// 			}
+
+// 			&:after{
+// 				border-top: 0.5rem solid #fff;
+// 				border-right: 0.5rem solid transparent;
+// 				border-left: 0.5rem solid transparent;
+// 				content: '';
+// 				display: block;
+// 				margin: 0 auto;
+// 				position: absolute;
+// 				right: 0;
+// 				left: 0;
+// 				top: 100%;
+// 				width: 0;
+// 				height: 0;
+				
+// 				@media (max-width: $tablet) {
+// 					right: auto;
+// 					left: 1rem;
+// 				}
+// 			}
+
+// 			.title{
+// 				display: block;
+// 				font-size: 1.6rem;
+// 				font-weight: 700;
+// 				line-height: 1.1;
+// 				margin-bottom: 1.2rem;
+// 			}
+// 			.time,
+// 			.cost{
+// 				// font-family: $font-family-base;
+// 				display: block;
+// 				line-height: 1;
+// 				margin-bottom: 0.7rem;
+// 			}
+// 			.link{
+// 				color: $brand-black;
+// 				display: block;
+// 				margin-top: 1rem;
+// 				text-decoration: underline;
+// 				transition: color 0.3s;
+
+// 				&:hover{
+// 					// color: $brand-black;
+// 				}
+// 			}
+// 		}
+
+// 		&:hover{
+// 			text-decoration: underline;
+			
+// 			.event-info-popup{
+// 				display: block;
+// 				z-index: 100;
+// 			}
+// 		}
+// 	}
+// }
+
+// .msw-calendar-list{
+// 	display: grid;
+// 	grid-template-columns: 1fr 1fr;
+// 	grid-column-gap: 4rem;
+// 	grid-row-gap: 4rem;
+// 	// flex-wrap: wrap;
+// 	// justify-content: space-between;
+
+// 	@media (max-width: $tablet) {
+// 		grid-template-columns: 1fr;
+// 	}
+
+// 	.event{
+// 		border-radius: 2.3rem;
+// 		padding: 3rem;
+// 		// border-top: 1px solid $brand-grey;
+// 		// margin-top: 4rem;
+// 		// padding-top: 4rem;
+// 		// width: 47%;
+
+// 		// &:first-child{
+// 		// 	border-top: 0;
+// 		// 	margin-top: 0;
+// 		// 	padding-top: 0;
+// 		// }
+
+// 		a{
+// 			// color: $brand-black;
+// 			text-decoration: none;
+
+// 			&:hover{
+// 				.post-link{
+// 				}
+// 			}
+// 		}
+// 	}
+
+// 	.inner{
+// 		display: flex;
+// 		align-items: flex-end;
+// 		justify-content: space-between;
+		
+// 		@media (max-width: $laptop) {
+// 			align-items: flex-start;
+// 		}
+		
+// 		@media (max-width: $tablet) {
+// 			display: block;
+// 		}
+
+// 	}
+	
+// 	// .post-thumbnail{
+// 	// 	width: 53%;
+		
+// 	// 	@media (max-width: $tablet) {
+// 	// 		margin: 0 auto 2rem auto;
+// 	// 		max-width: 40rem;
+// 	// 		width: 100%;
+// 	// 	}
+		
+// 	// 	.img{
+// 	// 		background: no-repeat center center;
+// 	// 		background-size: cover;
+// 	// 		display: block;
+// 	// 		height: 0;
+// 	// 		padding-bottom: 65%;
+// 	// 		width: 100%;
+// 	// 	}
+// 	// }
+
+// 	.content{
+// 		// width: 44%;
+		
+// 		@media (max-width: $tablet) {
+// 			margin: 0 auto;
+// 			// max-width: 40rem;
+// 			text-align: center !important;
+// 			width: 100%;
+// 		}
+// 	}
+
+// 	.post-label{
+// 		// color: $brand-green;
+// 		// font-family: $font-family-headline;
+// 		// font-size: 1.4rem;
+// 		// margin-bottom: 1rem;
+// 		// text-transform: uppercase;
+// 	}
+
+// 	.post-title{
+// 		// font-size: 2.6rem;
+// 		// line-height: 1.2;
+// 		margin: 0 0 2rem 0;
+// 	}
+
+// 	p{
+// 		// font-family: $font-family-headline;
+// 		// font-size: 1.6rem;
+// 		margin: 0.5rem 0 0 0;
+// 	}
+// 	.event-date{
+// 		span{
+// 			white-space: nowrap;
+// 		}
+// 	}
+// 	.event-time{
+// 	}
+// 	.event-location{
+// 	}
+// 	// .post-excerpt{
+// 	// 	margin-top: 2rem;
+// 	// }
+// 	.post-link{
+// 		// color: $brand-black;
+// 		display: block;
+// 		// font-size: 2rem;
+// 		// font-style: italic;
+// 		margin-top: 2rem;
+// 		text-decoration: underline;
+// 		transition: color 0.3s;
+// 	}
+// }
+
+// /* single */
+// .single-msw_events{
+
+// 	.single-pagination{
+// 		margin-top: 4rem;
+// 	}
+// }
+
+// .single-event-content{
+// 	// background: linear-gradient($brand-yellow, $brand-orange);
+// 	// background-size: 63% auto;
+// 	// border-radius: 0.8rem;
+// 	display: flex;
+// 	flex-wrap: wrap;
+// 	gap: 3rem;
+// 	justify-content: space-between;
+// 	margin-top: 3rem;
+// 	margin-bottom: 4rem;
+// 	padding: 3rem;
+	
+// 	@media (max-width: $mobile) {
+// 		display: block;
+
+// 		section + section{
+// 			margin-top: 2rem;
+// 		}
+// 	}
+
+
+// 	h2{
+// 		// color: $brand-black;
+// 		font-family: $font-family-headline;
+// 		font-size: 1.8rem;
+// 		margin: 0 0 0.5rem 0;
+// 	}
+
+// 	p{
+// 		margin: 0;
+// 	}
+
+// 	.event-date{
+// 		span{
+// 			white-space: nowrap;
+// 		}
+// 	}
+// }
