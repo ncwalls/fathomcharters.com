@@ -2,7 +2,7 @@
 
 		<?php if(!is_page_template('page_splash.php')): ?>
 			<?php
-				/*$primary_location = MakespaceChild::get_primary_location();
+				//$primary_location = MakespaceChild::get_primary_location();
 			?>
 			<footer class="site-footer">
 				<div class="container">

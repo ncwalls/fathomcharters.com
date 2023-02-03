@@ -58,7 +58,7 @@ class MakespaceFramework {
 		add_action( 'wp_footer', array( $this, 'wp_footer' ) );
 
 		// Universal Filters
-		add_filter( 'acf/settings/show_admin', array( $this, 'acf_show_admin' ) );
+		// add_filter( 'acf/settings/show_admin', array( $this, 'acf_show_admin' ) );
 		add_filter( 'acf/settings/load_json', array( $this, 'acf_load_json_path' ) );
 		add_filter( 'acf/settings/save_json', array( $this, 'acf_save_json_path' ) );
 		add_filter( 'admin_footer_text', array( $this, 'admin_footer_text' ) );
@@ -147,9 +147,9 @@ class MakespaceFramework {
 		return get_stylesheet_directory() . '/acf-json';
 	}
 
-	function acf_show_admin(){
-		return WP_DEBUG === true;
-	}
+	// function acf_show_admin(){
+	// 	return WP_DEBUG === true;
+	// }
 
 	function admin_body_class( $classes ){
 		return $classes;
