@@ -53,9 +53,9 @@ const watch        = require('gulp-watch')
 const builtInJavascript = [
   './node_modules/magnific-popup/dist/jquery.magnific-popup.js',
   './node_modules/slick-carousel/slick/slick.js',
-  'wp-content/themes/makespace-child/src/js/optimized-events.js',
-  'wp-content/themes/makespace-child/src/js/framework.js',
-  'wp-content/themes/makespace-child/src/js/theme.js'
+  'wp-content/themes/bumblephant-child/src/js/optimized-events.js',
+  'wp-content/themes/bumblephant-child/src/js/framework.js',
+  'wp-content/themes/bumblephant-child/src/js/theme.js'
 ]
 
 const logError = ( error ) => {
@@ -64,12 +64,12 @@ const logError = ( error ) => {
 }
 
 gulp.task('font-awesome', () => {
-  return gulp.src( './wp-content/themes/makespace-framework/includes/fontawesome-pro/web-fonts-with-css/webfonts/**.*' )
-    .pipe( gulp.dest( 'wp-content/themes/makespace-child/fonts' ) )
+  return gulp.src( './wp-content/themes/bumblephant-framework/includes/fontawesome-pro/web-fonts-with-css/webfonts/**.*' )
+    .pipe( gulp.dest( 'wp-content/themes/bumblephant-child/fonts' ) )
 })
 
 gulp.task('lint', () => {
-  return gulp.src('wp-content/themes/makespace-child/src/js/**')
+  return gulp.src('wp-content/themes/bumblephant-child/src/js/**')
     .pipe(jshint())
     .pipe(notify((file) => {
     if (file.jshint.success) {
@@ -88,7 +88,7 @@ gulp.task('scripts', ['lint'], () => {
   return gulp.src([...builtInJavascript, ...scripts])
   .pipe(sourcemaps.init())
   .pipe(uglify().on('error', notify.onError('Error: <%= error.message %>')))
-  .pipe(concat('wp-content/themes/makespace-child/scripts.min.js').on('error', notify.onError('Error: <%= error.message %>')))
+  .pipe(concat('wp-content/themes/bumblephant-child/scripts.min.js').on('error', notify.onError('Error: <%= error.message %>')))
   .pipe(sourcemaps.write('./'))
   .pipe(gulp.dest(''))
 })
@@ -99,7 +99,7 @@ gulp.task('scripts-watch', ['scripts'], (done) => {
 })
 
 gulp.task('sass', () => {
-  return gulp.src('wp-content/themes/makespace-child/src/scss/style.scss')
+  return gulp.src('wp-content/themes/bumblephant-child/src/scss/style.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'compressed'
@@ -111,9 +111,9 @@ gulp.task('sass', () => {
     })]))
     .pipe(sourcemaps.write('./', {
       includeContent: false,
-      sourceRoot: './wp-content/themes/makespace-child/src/scss'
+      sourceRoot: './wp-content/themes/bumblephant-child/src/scss'
     }))
-    .pipe(gulp.dest('./wp-content/themes/makespace-child/'))
+    .pipe(gulp.dest('./wp-content/themes/bumblephant-child/'))
     .pipe(browserSync.stream())
 })
 
@@ -124,12 +124,12 @@ gulp.task('serve', ['font-awesome', 'sass', 'scripts'], () => {
       ignorePaths: [localhostURLPathname + '/wp-admin/**']
     },
   })
-  gulp.watch('./wp-content/themes/makespace-child/src/scss/**', ['sass'])
-  gulp.watch('./wp-content/themes/makespace-child/src/js/**', ['scripts-watch'])
+  gulp.watch('./wp-content/themes/bumblephant-child/src/scss/**', ['sass'])
+  gulp.watch('./wp-content/themes/bumblephant-child/src/js/**', ['scripts-watch'])
   gulp.watch([
-    'wp-content/themes/makespace-child/.gulpwatch',
-    'wp-content/themes/makespace-child/*.php',
-    'wp-content/themes/makespace-child/**/*.php'
+    'wp-content/themes/bumblephant-child/.gulpwatch',
+    'wp-content/themes/bumblephant-child/*.php',
+    'wp-content/themes/bumblephant-child/**/*.php'
   ]).on('change', browserSync.reload)
 })
 
