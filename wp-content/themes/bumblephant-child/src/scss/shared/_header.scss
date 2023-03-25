@@ -21,12 +21,48 @@
 		}
 	}
 
+	.home &{
+		background: none;
+		box-shadow: none;
+
+		@media (max-width: $desktop) {
+			height: $header-height * 0.9;
+		}
+		@media (max-width: $mobile-nav-breakpoint) {
+			// height: $header-height;
+			transition: height 0.5s;
+		}
+		@media (max-width: $mobile) {
+			height: $header-mobile-height;
+		}
+	}
+
+	.home.scrolled &{
+		@media (max-width: $mobile-nav-breakpoint) {
+			height: $header-mobile-height;
+		}
+	}
+
 	.inner {
 		align-items: center;
 		display: flex;
 		height: 100%;
 		justify-content: center;
 		position: relative;
+
+
+		.home &{
+			
+			@media (max-width: $desktop) {
+				justify-content: space-between;
+				padding: 0 3rem;
+			}
+			
+			@media (max-width : $mobile-nav-breakpoint) {
+				justify-content: center;
+				padding: 0;
+			}
+		}
 		
 		@media (max-width : $mobile-nav-breakpoint) {
 			// justify-content: space-between;
@@ -39,12 +75,21 @@
 	margin: 0 10%;
 	order: 2;
 
+	.home &{
+		margin: 0 5%;
+		
+		@media (max-width: $desktop) {
+			margin: 0;
+		}
+	}
+
 	@media (max-width: $desktop) {
 		margin: 0 5%;
 	}
 	
 	@media (max-width : $mobile-nav-breakpoint) {
 		order: 0;
+		margin: 0;
 	}
 
 	.brand{
@@ -60,8 +105,15 @@
 .site-header-menu {
 	// text-align: right;
 	font-size: 1.5rem;
-	letter-spacing: 0.18rem;
+	letter-spacing: 0.12em;
 	text-transform: uppercase;
+
+	// .home &{
+	
+		@media (max-width: $desktop) {
+			font-size: 1.4rem;
+		}
+	// }
 
 	a{
 		color: $brand-black;
@@ -79,8 +131,11 @@
 	}
 
 	.menu {
+		white-space: nowrap;
+
 		> li {
 			display: inline-block;
+			margin: 0;
 
 			+ li{
 				margin-left: 2rem;

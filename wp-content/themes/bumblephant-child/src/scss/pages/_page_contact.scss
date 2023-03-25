@@ -1,20 +1,22 @@
 .page-template-page_contact {
 	
-}
+	// .wrapper{
+	// 	padding-bottom: 13rem;
+	// }
+	// .site-footer{
+	// 	margin-top: 0;
+	// }
 
-.contact-page-content{
-}
-
-.contact-page-info{
-}
-
-.contact-social{
+	h1{
+		text-align: center;
+	}
+	.wysiwyg.main{
+		// text-align: center;
+	}
 }
 
 .contact-page-form{
-
-}
-
-#gmap {
-	height: 30rem;
+	.gform_wrapper{
+		max-width: 57rem;
+	}
 }

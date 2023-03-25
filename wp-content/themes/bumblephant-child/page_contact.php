@@ -61,10 +61,15 @@ get_header(); ?>
 		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 			<div class="container">
 				<h1><?php the_title(); ?></h1>
-				<div class="wysiwyg">
+				<div class="wysiwyg main">
 					<?php the_content(); ?>
 				</div>
+
+				<section class="contact-page-form">
+					<?php echo do_shortcode('[gravityform id="1" title="true" description="false" ajax="true"]'); ?>
+				</section>
 				
+				<?php /* ?>
 				<div class="contact-page-content">
 					<section class="contact-info">
 						<?php if($phone): ?>
@@ -103,11 +108,8 @@ get_header(); ?>
 							</ul>
 						<?php endif; ?>
 					</section>
-					<section class="contact-page-form">
-						<?php echo do_shortcode('[gravityform id="1" title="false" description="false" ajax="true"]'); ?>
-					</section>
 				</div>
-				<div id="gmap" data-maxZoom="18" data-minZoom="1"></div>
+				*/ ?>
 			</div>
 		</article>
 	<?php endwhile; ?>

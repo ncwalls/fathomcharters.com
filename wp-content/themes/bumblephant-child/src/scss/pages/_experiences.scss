@@ -5,8 +5,8 @@
 		text-align: center;
 	}
 
-	.site-footer{
-		margin-top: 0;
+	.wrapper{
+		padding-bottom: 0;
 	}
 }
 
@@ -193,6 +193,9 @@
 				}
 				@media (max-width: $tablet) {
 					border-left: 0;
+					border-top: 1px solid #979797;
+					margin-top: 3rem;
+					padding-top: 3rem;
 					padding-left: 0;
 					width: 100%;
 				}

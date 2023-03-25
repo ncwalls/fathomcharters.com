@@ -111,11 +111,25 @@
 	};
 
 
+	var yachtFeatures = function() {
+		$('[data-action="yacht-feature"]').on('click', function(e) {
+			// e.preventDefault();
+			var targetId = $(this).attr('data-target');
+			$.magnificPopup.open({
+				items: {
+					src: '#'+targetId,
+					type: 'inline'
+				}
+			})
+		});
+	};
+
 
 	$(document).ready(function(){
 		homeHeroSlider();
 		scrollAnim();
 		scrollToAnchor();
+		yachtFeatures();
 	});
 
     window.addEventListener('load', function() {

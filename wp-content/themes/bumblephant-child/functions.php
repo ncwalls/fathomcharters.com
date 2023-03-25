@@ -575,3 +575,42 @@ function filter_the_content( $content ) {
  
     return $content;
 }
+
+
+add_shortcode( 'yacht_features', 'yacht_features_sc' );
+function yacht_features_sc($atts){
+	$yacht_img = get_field('yacht_image');
+	// $yacht_features = get_field('yacht_features');
+	$yacht_manual = get_field('manual_file');
+	$yacht_manual_link_text = get_field('manual_link_text');
+
+	if($yacht_img){
+		$yacht_html = '';
+		$yacht_html .= '<section class="yacht-features-container">';
+			$yacht_html .= '<div class="yacht-features-inner">';
+				$yacht_html .= '<div class="yacht-features-bg">';
+					$yacht_html .= '<img src="' . $yacht_img['sizes']['large'] . '" alt="">';
+				$yacht_html .= '</div>';
+				$features_count = 0;
+				while(have_rows('yacht_features')): the_row(); $features_count++;
+					$yacht_html .= '<div class="yacht-feature" 
+					data-action="yacht-feature"
+					data-target="yacht-feature-'.$features_count.'"
+					style="top:'.get_sub_field('position_y').'%; left:'.get_sub_field('position_x').'%;"
+					></div>';
+					$yacht_html .= '<section class="yacht-feature-modal" id="yacht-feature-'.$features_count.'">';
+						$yacht_html .= '<h3 class="title">' . get_sub_field('title') . '</h3>';
+						$yacht_html .= '<div class="content">' . get_sub_field('description') . '</div>';
+						if($yacht_manual){
+							$yacht_html .= '<div class="manual-link">';
+								$yacht_html .= '<a href="'.$yacht_manual['url'].'" target="_blank" class="button plain">'.$yacht_manual_link_text.'</a>';
+							$yacht_html .= '</div>';
+						}
+					$yacht_html .= '</section>';
+				endwhile;
+			$yacht_html .= '</div>';
+		$yacht_html .= '</section>';
+
+		return $yacht_html;
+	}
+}

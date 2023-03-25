@@ -37,11 +37,17 @@ body {
 	background-size: 100% auto;
 	// min-height: 100vh;
 	overflow: hidden;
-	padding: 7vw 0 0 0;
+	padding: 7vw 0 13rem 0;
+	
+	.home &{
+		background: none;
+		padding: 0;
+	}
 	
 	@media (max-width: $tablet) {
 		background-size: 200% auto;
 		padding-top: 12vw;
+		padding-bottom: 10rem;
 	}
 	@media (max-width: $mobile) {
 		padding-top: 18vw;
