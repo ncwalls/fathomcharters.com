@@ -6,10 +6,19 @@
 			?>
 			<footer class="site-footer">
 				<div class="container">
+					<?php if(get_field('footer_logo', 'option')): ?>
+						<img src="<?php echo get_field('footer_logo', 'option'); ?>" alt="" class="footer-logo">
+					<?php endif; ?>
+					<?php if(get_field('footer_title', 'option')): ?>
+						<div class="footer-title"><?php echo get_field('footer_title', 'option'); ?></div>
+					<?php endif; ?>
+					<?php if($footer_button = get_field('footer_button', 'option')): ?>
+						<a href="<?php echo $footer_button['url']; ?>" target="<?php echo $footer_button['target']; ?>" class="button footer-button"><?php echo $footer_button['title']; ?></a>
+					<?php endif; ?>
 					<div class="site-footer__menu">
-						<?php if($primary_location && have_rows('social_media_links', $primary_location->ID)): ?>
+						<?php if(have_rows('social_media_links', 'option')): ?>
 							<ul class="footer-social">
-								<?php while(have_rows('social_media_links', $primary_location->ID)): the_row(); ?>
+								<?php while(have_rows('social_media_links', 'option' )): the_row(); ?>
 									<?php 
 										$social_site_name = get_sub_field('site')['label'];
 										$social_site_class = get_sub_field('site')['value'];

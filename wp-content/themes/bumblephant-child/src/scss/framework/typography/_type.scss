@@ -8,32 +8,53 @@ h6 {
 	font-family: $font-family-headline;
 	font-weight: $font-weight-headline;
 	line-height: 1.1;
-	margin: 0 0 1rem;
+	margin: 3rem 0 1rem;
+	// text-transform: uppercase;
 	word-wrap: break-word;
 }
+
 h1{
+	font-size: 4.6rem;
 	line-height: 1;
+	margin: 0 0 2rem 0;
+	text-align: center;
+	
+	@media (max-width: $mobile) {
+		font-size: 4rem;
+	}
 }
+
 h2{
+	font-size: 3.6rem;
 	line-height: 1;
+	margin-bottom: 2rem;
 }
+
 h3{
 }
+
 p {
 	margin-top: 0;
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
 }
+
 blockquote {
 	padding: 0;
 	margin: 0 0 1rem;
 }
 
 ol, ul {
-	margin: 0 0 1rem 2rem;
+	margin: 0 0 2rem 2rem;
 	padding: 0;
 
 	ol, ul {
 		margin-bottom: 0;
+	}
+
+	li{
+		+ li{
+			margin-top: 1rem;
+		}
 	}
 
 	nav & {
@@ -42,10 +63,12 @@ ol, ul {
 		padding: 0;
 	}
 }
+
 address {
 	font-style: normal;
 	margin: 0 0 1rem;
 }
+
 [hidden] {
 	display: none !important;
 }
@@ -55,7 +78,6 @@ strong, b{
 }
 
 .wysiwyg{
-
 
 	table {
 		margin: 0 auto 1em;

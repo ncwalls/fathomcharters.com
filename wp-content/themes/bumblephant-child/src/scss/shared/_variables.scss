@@ -2,15 +2,16 @@
   FONTS
   font-family: 'Cinzel', serif;
   font-family: 'Rubik', sans-serif;
+  font-family: 'Michroma', sans-serif;
 ----------------------------------------------------------------------*/
 $font-family-base:     'Rubik', sans-serif;
 $font-weight-base:     300;
 $font-family-headline: 'Cinzel', serif;
 $font-weight-headline: 400;
-$font-family-callout:  $font-family-base;
+$font-family-callout:  'Michroma', $font-family-base;
 $font-size-base:       18px;
 $font-size-mobile:     $font-size-base;
-$line-height-base:     1.5;
+$line-height-base:     1.4;
 $font-family-icons:    "Font Awesome 5 Pro"; 
 
 
@@ -18,11 +19,13 @@ $font-family-icons:    "Font Awesome 5 Pro";
   BRANDING COLORS
 ----------------------------------------------------------------------*/
 $brand-black: #000;
-$brand-blue: #04c;
+$brand-blue-lt: #75ABDC;
+$brand-blue-drk: #071B38;
 $brand-grey-lt: #d8d8d8;
 $brand-grey: #58585A;
 $brand-gold: #A4802D;
 $brand-red: #c00;
+$brand-purple: #7D84B3;
 
 /* Spacing */
 $header-height: 12rem;
@@ -58,7 +61,8 @@ $form-error-color:	   $brand-red;
 /*----------------------------------------------------------------------
   CONTAINERS & GRID
 ----------------------------------------------------------------------*/
-$container-max-width: 915px;
+$container-max-width: 91.5rem;
+$container-wide-max-width: 108.4rem;
 $container-width:     85%;
 $design-width:        1400px;
 
@@ -87,7 +91,7 @@ $mobile-nav-breakpoint: $laptop;
 
 ----------------------------------------------------------------------*/
 $fa-font-path:       'fonts';
-$max-width:          #{$container-max-width/10px}rem;
+// $max-width:          #{$container-max-width/10px}rem;
 @if $use-max-width == true {
 	$phablet:  $phablet - 1px;
 	$tablet:   $tablet - 1px;

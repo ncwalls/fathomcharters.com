@@ -2,6 +2,10 @@
 	// @include clearfix();
 	margin-left: auto;
 	margin-right: auto;
-	max-width: $max-width;
+	max-width: $container-max-width;
 	width: $container-width;
+
+	&.wide{
+		max-width: $container-wide-max-width;
+	}
 }

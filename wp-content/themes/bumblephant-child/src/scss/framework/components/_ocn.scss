@@ -47,35 +47,34 @@
 }
 
 #ocn-top {
-	align-items: center;
 	display: flex;
 	justify-content: space-between;
 	padding: 20px;
 	position: relative;
 }
 #ocn-brand {
-	max-width: 150px;
+	width: 4rem;
 }
 #ocn-close {
 	background: transparent;
 	border: none;
 	border-radius: 0;
 	display: block;
-	height: 32px;
 	padding: 0;
 	position: relative;
 	right: -4px;
 	top: -2px;
-	width: 32px;
+	height: 2.5rem;
+	width: 2.5rem;
 
 	&:before,
 	&:after {
-		background: $brand-black;
+		background: $brand-grey;
 		border-radius: 2px;
 		content: '';
 		display: block;
 		height: 4px;
-		top: 50%;
+		top: 48%;
 		left: 0;
 		position: absolute;
 		width: 100%;
@@ -88,7 +87,16 @@
 	}
 }
 
-#ocn-nav-primary {
+#ocn-nav-1,
+#ocn-nav-2 {
+	font-size: 1.5rem;
+	letter-spacing: 0.18rem;
+	text-transform: uppercase;
+
+	a{
+		color: $brand-grey;
+	}
+
 	.menu {
 		> li {
 			position: relative;
@@ -100,7 +108,7 @@
 
 			a {
 				display: block;
-				padding: 10px 20px;
+				padding: 1rem 2rem;
 				position: relative;
 			}
 			.ocn-sub-menu-button{
@@ -174,14 +182,14 @@
 	height: 22px;
 	line-height: 1;
 	padding: 0;
-	position: relative;
-	right: 0;
+	position: absolute;
+	right: 5%;
 	width: 34px;
 
 	&:before,
 	&:after,
 	.middle-bar{
-		background: $brand-black;
+		background: $brand-grey;
 		border-radius: 2px;
 		display: block;
 		height: 4px;

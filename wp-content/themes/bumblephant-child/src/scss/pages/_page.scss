@@ -1,3 +1,74 @@
 .page-template-default {
 	
 }
+
+.team-sections-list{
+
+	.team-section{
+		margin-top: 4.5rem;
+	}
+
+	.section-title{
+		font-size: 4.6rem;
+		margin: 0;
+		text-align: center;
+	}
+
+	.team-list{
+		display: flex;
+		flex-wrap: wrap;
+		gap: 5%;
+		justify-content: center;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		
+		@media (max-width: $tablet) {
+			gap: 6%;
+		}
+		@media (max-width: $mobile) {
+			display: block;
+			gap: 0;
+		}
+		
+		li{
+			margin-top: 3rem;
+			width: 30%;
+			
+			@media (max-width: $tablet) {
+				width: 47%;
+			}
+			@media (max-width: $mobile) {
+				width: 100%;
+			}
+		}
+
+		.image{
+			background: $brand-grey-lt;
+			margin-bottom: 1.7rem;
+			padding-bottom: 100%;
+			position: relative;
+			width: 100%;
+
+			img{
+				display: block;
+				object-fit: cover;
+				object-position: center;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.name{
+			font-family: $font-family-base;
+			font-size: 1.8rem;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+		.bio{
+
+		}
+	}
+}

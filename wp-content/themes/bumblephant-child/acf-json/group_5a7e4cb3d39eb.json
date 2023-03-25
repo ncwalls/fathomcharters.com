@@ -6,6 +6,7 @@
             "key": "field_5a930ba4388d5",
             "label": "General",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -22,6 +23,7 @@
             "key": "field_5a930bdd388d7",
             "label": "Logo",
             "name": "default_logo",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -43,9 +45,10 @@
             "mime_types": ""
         },
         {
-            "key": "field_610c06beafaa3",
-            "label": "Footer Logo",
-            "name": "footer_logo",
+            "key": "field_641df29ddbdf8",
+            "label": "Logo Icon",
+            "name": "logo_icon",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -56,7 +59,6 @@
                 "id": ""
             },
             "return_format": "url",
-            "preview_size": "medium",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -64,12 +66,14 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": ""
+            "mime_types": "",
+            "preview_size": "medium"
         },
         {
             "key": "field_5a930bc3388d6",
             "label": "Favicon",
             "name": "default_favicon",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -94,6 +98,7 @@
             "key": "field_5a7e4cb84d40c",
             "label": "Default Header Image",
             "name": "default_header_image",
+            "aria-label": "",
             "type": "image",
             "instructions": "This is the fallback header image if no other image is set on a particular page or its parent.",
             "required": 0,
@@ -118,6 +123,7 @@
             "key": "field_610c1aebd38fe",
             "label": "Default Placeholder Image",
             "name": "default_placeholder_image",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -139,9 +145,71 @@
             "mime_types": "jpg"
         },
         {
+            "key": "field_610c06beafaa3",
+            "label": "Footer Logo",
+            "name": "footer_logo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_641e01b380355",
+            "label": "Footer Title",
+            "name": "footer_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_641e01bf80356",
+            "label": "Footer Button",
+            "name": "footer_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_63dc60f521e13",
             "label": "Contact",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -158,6 +226,7 @@
             "key": "field_63dc616c21e14",
             "label": "Email Address",
             "name": "email_address",
+            "aria-label": "",
             "type": "email",
             "instructions": "",
             "required": 0,
@@ -176,6 +245,7 @@
             "key": "field_63dc617621e15",
             "label": "Phone Number",
             "name": "phone_number",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -195,6 +265,7 @@
             "key": "field_63dc618421e16",
             "label": "Phone Number Display",
             "name": "phone_number_display",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -214,6 +285,7 @@
             "key": "field_63dc61e2eec6f",
             "label": "Social Media Links",
             "name": "social_media_links",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -227,12 +299,13 @@
             "min": 0,
             "max": 0,
             "layout": "table",
-            "button_label": "",
+            "button_label": "Add Row",
             "sub_fields": [
                 {
                     "key": "field_63dc61f1eec70",
                     "label": "Site",
                     "name": "site",
+                    "aria-label": "",
                     "type": "select",
                     "instructions": "",
                     "required": 0,
@@ -256,12 +329,14 @@
                     "ui": 0,
                     "return_format": "array",
                     "ajax": 0,
-                    "placeholder": ""
+                    "placeholder": "",
+                    "parent_repeater": "field_63dc61e2eec6f"
                 },
                 {
                     "key": "field_63dc6213eec71",
                     "label": "URL",
                     "name": "url",
+                    "aria-label": "",
                     "type": "url",
                     "instructions": "",
                     "required": 0,
@@ -272,14 +347,17 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": ""
+                    "placeholder": "",
+                    "parent_repeater": "field_63dc61e2eec6f"
                 }
-            ]
+            ],
+            "rows_per_page": 20
         },
         {
             "key": "field_5a7e4cfa4d40d",
             "label": "Scripts",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -296,6 +374,7 @@
             "key": "field_5a7e4d264d40e",
             "label": "Header Scripts",
             "name": "universal_header_scripts",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "These will appear on every page throughout the site just before the closing head tag.",
             "required": 0,
@@ -315,6 +394,7 @@
             "key": "field_5a7e4d3f4d40f",
             "label": "Footer Scripts",
             "name": "universal_footer_scripts",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "These will appear on every page throughout the site just before the closing body tag.",
             "required": 0,
@@ -334,6 +414,7 @@
             "key": "field_5a7e4de895b53",
             "label": "API Keys",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -350,6 +431,7 @@
             "key": "field_5a7e4df395b54",
             "label": "Google Maps API Key",
             "name": "default_google_map_api_key",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -384,5 +466,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1675387426
+    "modified": 1679688258
 }

@@ -28,14 +28,26 @@ body {
 		padding-top: 0;
 	}
 
-	@media (max-width: $phablet) {
+	@media (max-width: $mobile-nav-breakpoint) {
 		padding-top: $header-mobile-height;
 	}
 }
 .wrapper {
+	background: url(assets/banner.png) no-repeat center top;
+	background-size: 100% auto;
 	// min-height: 100vh;
 	overflow: hidden;
+	padding: 7vw 0 0 0;
+	
+	@media (max-width: $tablet) {
+		background-size: 200% auto;
+		padding-top: 12vw;
+	}
+	@media (max-width: $mobile) {
+		padding-top: 18vw;
+	}
 }
+
 .skip-link,
 .screen-reader-text {
 	position: absolute !important;

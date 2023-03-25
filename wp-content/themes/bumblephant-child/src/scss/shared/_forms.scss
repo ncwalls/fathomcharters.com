@@ -315,18 +315,50 @@ input[type="button"],
 input[type="submit"],
 .button,
 .wp-block-button__link{
+	background: $brand-gold;
 	border: 0;
-	border-radius: 0.8rem;
+	border-radius: 2rem;
+	color: #fff;
 	cursor: pointer;
 	display: inline-block;
-	font-family: inherit;
-	font-size: inherit;
+	font-family: $font-family-callout;
+	font-size: 1.3rem;
 	font-style: normal;
+	letter-spacing: 0.24rem;
 	line-height: normal;
-	padding: 1rem 3rem;
+	padding: 0.9rem 4rem 1.1rem 4rem;
+	text-align: center;
+	text-transform: uppercase;
 	transition: all 0.3s;
+	
+	@media (max-width: $mobile) {
+		padding-right: 3rem;
+		padding-left: 3rem;
+	}
 
 	&:hover {
+		background: $brand-blue-lt;
+	}
+
+	&.ghost{
+		background: none;
+		border: 1px solid $brand-gold;
+		color: $brand-gold;
+
+		&:hover {
+			background: $brand-gold;
+			color: #fff;
+		}
+
+		&.light{
+			border: 1px solid #fff;
+			color: #fff;
+
+			&:hover{
+				background: #fff;
+				color: $brand-gold;
+			}
+		}
 	}
 }
 
