@@ -111,16 +111,70 @@
 	};
 
 
-	var yachtFeatures = function() {
-		$('[data-action="yacht-feature"]').on('click', function(e) {
-			// e.preventDefault();
-			var targetId = $(this).attr('data-target');
-			$.magnificPopup.open({
-				items: {
-					src: '#'+targetId,
-					type: 'inline'
+	// var yachtFeatures = function() {
+	// 	$('[data-action="yacht-feature"]').on('click', function(e) {
+	// 		// e.preventDefault();
+	// 		var targetId = $(this).attr('data-target');
+	// 		$.magnificPopup.open({
+	// 			items: {
+	// 				src: '#'+targetId,
+	// 				type: 'inline'
+	// 			}
+	// 		})
+	// 	});
+	// };
+
+	var mediaGallerySlider = function() {
+		$('.media-gallery-slider').slick({
+			arrows: true,
+			prevArrow: '<button class="slick-prev slick-arrow" aria-label="Previous" type="button"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19.3 58" style="enable-background:new 0 0 19.3 58;" xml:space="preserve"><polygon points="7.5,29 19.3,58 0,29 19.2,0 "/></svg></button>',
+			nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19.3 58" style="enable-background:new 0 0 19.3 58;" xml:space="preserve"><polygon points="11.8,29 0,0 19.3,29 0.1,58 "/></svg></button>',
+			dots: true,
+			speed: 1000,
+			// autoplay: true,
+			// autoplaySpeed: 4000,
+			pauseOnHover: false,
+			adaptiveHeight: true
+		});
+
+		$('[data-action="gallery-nav"]').on('click', function(e) {
+			e.preventDefault();
+			var target = $(this).attr('data-target');
+			$('.media-gallery-slider').slick('slickGoTo', target);
+
+			$(this).addClass('current');
+			$('.media-gallery-nav').find('[data-action="gallery-nav"]').not(this).removeClass('current');
+		});
+
+		$('.media-gallery-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+			var target = $('.media-gallery-nav').find('[data-action="gallery-nav"][data-target="'+nextSlide+'"]');
+			target.addClass('current');
+			$('.media-gallery-nav').find('[data-action="gallery-nav"]').not(target).removeClass('current');
+		});
+
+
+		$('.img-gallery').each(function(i,el){
+			$(el).magnificPopup({
+				delegate: 'a',
+				type: 'image',
+				gallery: {
+					enabled: true
 				}
-			})
+			});
+		});
+	};
+
+	var yachtSlider = function() {
+		$('.yacht-slider').slick({
+			arrows: true,
+			prevArrow: '<button class="slick-prev slick-arrow" aria-label="Previous" type="button"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19.3 58" style="enable-background:new 0 0 19.3 58;" xml:space="preserve"><polygon points="7.5,29 19.3,58 0,29 19.2,0 "/></svg></button>',
+			nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19.3 58" style="enable-background:new 0 0 19.3 58;" xml:space="preserve"><polygon points="11.8,29 0,0 19.3,29 0.1,58 "/></svg></button>',
+			dots: true,
+			speed: 1000,
+			// autoplay: true,
+			// autoplaySpeed: 4000,
+			pauseOnHover: false,
+			adaptiveHeight: true
 		});
 	};
 
@@ -129,7 +183,9 @@
 		homeHeroSlider();
 		scrollAnim();
 		scrollToAnchor();
-		yachtFeatures();
+		// yachtFeatures();
+		mediaGallerySlider();
+		yachtSlider();
 	});
 
     window.addEventListener('load', function() {

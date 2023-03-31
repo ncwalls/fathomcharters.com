@@ -15,7 +15,7 @@ class MakespaceChild {
 		// add_shortcode( 'first_name_possessive', array( $this, 'fname_possessive') );
 		// add_shortcode( 'first_name', array( $this, 'fname') );
 		
-		//$this->custom_post_types();
+		$this->custom_post_types();
 		$this->modify_pt(); //may need Yoast Test Helper plugin - Reset Indexables tables & migrations
 
 	}
@@ -231,24 +231,24 @@ class MakespaceChild {
 
 	function custom_post_types() {
 
-		// register_post_type( 'service', array(
-		// 	'label' => 'Services',
+		// register_post_type( 'location', array(
+		// 	'label' => 'Locations',
 		// 	'labels' => array(
-		// 		'name' => 'Services',
-		// 		'singular_name' => 'Service',
+		// 		'name' => 'Locations',
+		// 		'singular_name' => 'Location',
 		// 	),
 		// 	'has_archive' => true,
 		// 	'hierarchical' => true,
 		// 	'public' => true,
 		// 	'supports' => array( 'title', 'editor', 'excerpt', 'revisions', 'page-attributes' ),
-		// 	'menu_icon' => 'dashicons-lightbulb',
-			// 'show_in_rest' => true,
-		// 	'rewrite' => array(
-		// 		'slug' =>  'services'
-		// 	)
+		// 	'menu_icon' => 'dashicons-location',
+		// 	'show_in_rest' => true,
+		// 	// 'rewrite' => array(
+		// 	// 	'slug' =>  'locations'
+		// 	// )
 		// ) );
 
-		// register_taxonomy( 'service_category', 'service', array(
+		// register_taxonomy( 'location_category', 'location', array(
 		// 	'label' => 'Categories',
 		// 	'labels' => array(
 		// 		'name' => 'Categories',
@@ -256,14 +256,14 @@ class MakespaceChild {
 		// 	),
 		// 	'hierarchical' => true,
 		// 	'show_admin_column' => true,
-			// 'show_in_rest' => true
+		// 	'show_in_rest' => true
 		// ) );
 
 		// acf_add_options_sub_page( array(
-		// 	'page_title' => 'Services Settings',
-		// 	'menu_title' => 'Services Settings',
-		// 	'menu_slug' => 'service-archive-settings',
-		// 	'parent_slug' => 'edit.php?post_type=service'
+		// 	'page_title' => 'Locations Settings',
+		// 	'menu_title' => 'Locations Settings',
+		// 	'menu_slug' => 'location-archive-settings',
+		// 	'parent_slug' => 'edit.php?post_type=location'
 		// ) );
 	}
 

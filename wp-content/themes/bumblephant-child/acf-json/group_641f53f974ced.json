@@ -43,11 +43,11 @@
             "append": ""
         },
         {
-            "key": "field_641f53f9d3a92",
-            "label": "Yacht Image",
-            "name": "yacht_image",
+            "key": "field_6426f5ef938f4",
+            "label": "Galleries Title",
+            "name": "galleries_title",
             "aria-label": "",
-            "type": "image",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -56,21 +56,151 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
+            "default_value": "Media Gallery",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
-            "key": "field_641f5471d3a93",
-            "label": "Yacht Features",
-            "name": "yacht_features",
+            "key": "field_6426ee7e2ea9b",
+            "label": "Galleries",
+            "name": "galleries",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6426ef8a2ea9c",
+                    "label": "Gallery Title",
+                    "name": "gallery_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6426ee7e2ea9b"
+                },
+                {
+                    "key": "field_6426f01f2ea9d",
+                    "label": "Gallery Type",
+                    "name": "gallery_type",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "images": "images",
+                        "video": "video"
+                    },
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_6426ee7e2ea9b"
+                },
+                {
+                    "key": "field_6426f0482ea9e",
+                    "label": "Images",
+                    "name": "images",
+                    "aria-label": "",
+                    "type": "gallery",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6426f01f2ea9d",
+                                "operator": "==",
+                                "value": "images"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min": "",
+                    "max": "",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "insert": "append",
+                    "preview_size": "small",
+                    "parent_repeater": "field_6426ee7e2ea9b"
+                },
+                {
+                    "key": "field_6426f0742ea9f",
+                    "label": "Video",
+                    "name": "video",
+                    "aria-label": "",
+                    "type": "oembed",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6426f01f2ea9d",
+                                "operator": "==",
+                                "value": "video"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "width": "",
+                    "height": "",
+                    "parent_repeater": "field_6426ee7e2ea9b"
+                }
+            ]
+        },
+        {
+            "key": "field_641f53f9d3a92",
+            "label": "Yacht Slider",
+            "name": "yacht_slider",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -90,16 +220,42 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_641f547ed3a94",
-                    "label": "Title",
-                    "name": "title",
+                    "key": "field_6426f741837ac",
+                    "label": "Image",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "70",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_641f53f9d3a92"
+                },
+                {
+                    "key": "field_6426f732837ab",
+                    "label": "Caption",
+                    "name": "caption",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "30",
                         "class": "",
                         "id": ""
                     },
@@ -108,74 +264,7 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_641f5471d3a93"
-                },
-                {
-                    "key": "field_641f5484d3a95",
-                    "label": "Description",
-                    "name": "description",
-                    "aria-label": "",
-                    "type": "wysiwyg",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "40",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "basic",
-                    "media_upload": 0,
-                    "delay": 0,
-                    "parent_repeater": "field_641f5471d3a93"
-                },
-                {
-                    "key": "field_641f5bf9cd96d",
-                    "label": "Position X",
-                    "name": "position_x",
-                    "aria-label": "",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "15",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "min": "",
-                    "max": "",
-                    "placeholder": "",
-                    "step": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_641f5471d3a93"
-                },
-                {
-                    "key": "field_641f5c08cd96e",
-                    "label": "Position Y",
-                    "name": "position_y",
-                    "aria-label": "",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "15",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "min": "",
-                    "max": "",
-                    "placeholder": "",
-                    "step": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_641f5471d3a93"
+                    "parent_repeater": "field_641f53f9d3a92"
                 }
             ]
         }
@@ -198,5 +287,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1679782658
+    "modified": 1680284735
 }
