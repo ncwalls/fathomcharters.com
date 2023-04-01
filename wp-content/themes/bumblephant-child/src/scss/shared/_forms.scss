@@ -768,6 +768,10 @@ input[type="submit"],
 
 	.gform_next_button,
 	.gform_previous_button{
-		display: none;
+		// display: none;
+		opacity: 0;
+		position: absolute;
+		left: 100vw;
+		z-index: -1;
 	}
 }

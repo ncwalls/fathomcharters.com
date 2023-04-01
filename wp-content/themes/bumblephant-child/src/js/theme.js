@@ -192,6 +192,26 @@
 		});
 	};
 
+	var destinationsList = function() {
+		$('[data-action="destination-location"]').on('click', function(e) {
+			var parent = $(this).parents('li');
+			parent.toggleClass('open');
+			$('.locations-list').find('li').not(parent).removeClass('open');
+		});
+
+		$('[data-action="destination-map-location"]').on('click', function(e) {
+			var target = $(this).attr('data-target');
+			var targetItem = $('#location-item-'+target);
+			targetItem.addClass('open');
+			$('.locations-list').find('li').not(targetItem).removeClass('open');
+
+			
+			var anchorPosition = targetItem.offset().top;
+			var finalPosition = anchorPosition - $('.site-header').outerHeight() - 20;
+			$("html, body").animate({scrollTop: finalPosition}, 1000);
+		});
+	};
+
 
 	$(document).ready(function(){
 		homeHeroSlider();
@@ -201,6 +221,7 @@
 		// yachtFeatures();
 		mediaGallerySlider();
 		yachtSlider();
+		destinationsList();
 	});
 
     window.addEventListener('load', function() {
