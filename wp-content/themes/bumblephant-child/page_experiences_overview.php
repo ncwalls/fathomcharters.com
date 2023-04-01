@@ -32,16 +32,19 @@
 								<figure class="image">
 									<a href="<?php echo get_permalink($page_id); ?>">
 										<?php if(get_the_post_thumbnail_url( $page_id )): ?>
-											<img src="<?php echo get_the_post_thumbnail_url( $page_id, 'large' ); ?>" class="experience-img" alt="">
+											<img src="<?php echo get_the_post_thumbnail_url( $page_id, 'large' ); ?>" class="experience-img" alt="" loading="lazy">
 										<?php elseif(get_field('experience_image', $page_id)): ?>
-											<img src="<?php echo get_field('experience_image', $page_id)['sizes']['large']; ?>" class="experience-img" alt="">
+											<img src="<?php echo get_field('experience_image', $page_id)['sizes']['large']; ?>" class="experience-img" alt="" loading="lazy">
 										<?php endif; ?>
 									</a>
 								</figure>
 								<div class="content">
 									<div>
 										<h2 class="section-title">
-											<a href="<?php echo get_permalink($page_id); ?>"><?php echo get_the_title($page_id); ?></a>
+											<a href="<?php echo get_permalink($page_id); ?>">
+												<?php echo get_the_title($page_id); ?>
+												<?php echo get_field('duration', $page_id); ?>
+											</a>
 										</h2>
 										<div class="wysiwyg">
 											<?php echo get_field('short_description', $page_id); ?>

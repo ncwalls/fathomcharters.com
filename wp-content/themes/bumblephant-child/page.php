@@ -12,6 +12,9 @@
 			<div class="container">
 
 				<h1><?php the_title(); ?></h1>
+				<?php if(get_field('duration')): ?>
+					<h2 class="subtitle"><?php the_field('duration'); ?></h2>
+				<?php endif; ?>
 
 				<div class="wysiwyg main">
 					<?php the_content(); ?>

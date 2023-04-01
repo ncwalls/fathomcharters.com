@@ -22,8 +22,9 @@
 	}
 
 	.home &{
-		background: none;
+		background: rgba(#fff,0);
 		box-shadow: none;
+		transition: all 0.5s;
 
 		@media (max-width: $desktop) {
 			height: $header-height * 0.9;
@@ -38,6 +39,9 @@
 	}
 
 	.home.scrolled &{
+		background: #fff;
+		box-shadow: 0 0.2rem 0.8rem rgba(0,0,0,0.26);
+
 		@media (max-width: $mobile-nav-breakpoint) {
 			height: $header-mobile-height;
 		}
