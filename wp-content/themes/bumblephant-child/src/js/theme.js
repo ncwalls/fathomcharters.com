@@ -12,6 +12,20 @@
 		});
 	};
 
+	var destinationsSlider = function() {
+		$('.destinations-slider').slick({
+			arrows: true,
+			prevArrow: '<button class="slick-prev slick-arrow" aria-label="Previous" type="button"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19.3 58" style="enable-background:new 0 0 19.3 58;" xml:space="preserve"><polygon points="7.5,29 19.3,58 0,29 19.2,0 "/></svg></button>',
+			nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19.3 58" style="enable-background:new 0 0 19.3 58;" xml:space="preserve"><polygon points="11.8,29 0,0 19.3,29 0.1,58 "/></svg></button>',
+			dots: false,
+			speed: 1000,
+			// autoplay: true,
+			// autoplaySpeed: 4000,
+			pauseOnHover: false,
+			adaptiveHeight: true
+		});
+	};
+
 
 	var scrollAnim = function(){
 
@@ -181,6 +195,7 @@
 
 	$(document).ready(function(){
 		homeHeroSlider();
+		destinationsSlider();
 		scrollAnim();
 		scrollToAnchor();
 		// yachtFeatures();

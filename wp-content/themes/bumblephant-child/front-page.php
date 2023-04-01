@@ -125,17 +125,20 @@
 							<?php while(have_rows('destinations_slider')): the_row(); ?>
 								<div class="slide">
 									<?php if(get_sub_field('image')): ?>
-										<div class="image" style="background-image:url(<?php echo get_sub_field('image')['sizes']['large']; ?>)">
+										<div class="image">
+											<div class="img" style="background-image:url(<?php echo get_sub_field('image')['sizes']['large']; ?>)"></div>
 										</div>
 									<?php endif; ?>
-									<?php if(get_sub_field('title')): ?>
-										<h3 class="title"><?php the_sub_field( 'title' ); ?></h3>
-									<?php endif; ?>
-									<?php if(get_sub_field('description')): ?>
-										<div class="description">
-											<?php the_sub_field('description'); ?>
-										</div>
-									<?php endif; ?>
+									<div class="content">
+										<?php if(get_sub_field('title')): ?>
+											<h3 class="title"><?php the_sub_field( 'title' ); ?></h3>
+										<?php endif; ?>
+										<?php if(get_sub_field('description')): ?>
+											<div class="description">
+												<?php the_sub_field('description'); ?>
+											</div>
+										<?php endif; ?>
+									</div>
 								</div>
 							<?php endwhile; ?>
 						</div>
@@ -158,6 +161,17 @@
 					<div class="bg lazy-background"></div>
 				<?php endif; ?>
 				<div class="container">
+					<div class="icon">
+						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 72 112" style="enable-background:new 0 0 72 112;" xml:space="preserve">
+							<path d="M68.3,62.2c-5.6-10.3-8.8-22.1-8.8-34.7c0-3.8,0.3-7.5,0.8-11.1c-2.8,7.7-4.3,16-4.3,24.7c0,6.9,1,13.6,2.8,20
+							c-1.7,0.1-3.3,0.4-4.9,0.8c-1.8,0.5-3.5,1.1-5.1,1.9c-3,1.5-5.7,3.5-8,5.9c-1.3-1.4-2.2-3.3-2.2-5.4c0-4.3,3.5-7.8,7.8-7.8
+							c-5.5-18.1-9-37-10.4-56.5c-1.3,19.5-4.9,38.4-10.4,56.5c4.3,0,7.7,3.5,7.8,7.7v0.2c0,2.1-0.8,3.9-2.2,5.3c-2.3-2.4-5-4.4-8-5.9
+							c-1.6-0.8-3.3-1.4-5.1-1.9c-1.6-0.4-3.2-0.7-4.9-0.8c1.8-6.3,2.8-13,2.8-20c0-8.7-1.5-17-4.3-24.7c0.6,3.6,0.8,7.3,0.8,11.1
+							c0,12.6-3.2,24.4-8.8,34.7c-1.1,2.1-2.4,4.1-3.7,6c2-0.5,4.1-0.7,6.3-0.7c1.6,0,3.1,0.1,4.6,0.4c3.5,0.6,6.7,1.9,9.6,3.6
+							c7.7,4.7,12.8,13.2,12.9,22.9l0,17.6c1.7-0.3,3.4-0.7,5.1-1l0-16.4c0-9.8,5.2-18.3,12.9-23.1c2.9-1.8,6.1-3,9.6-3.6
+							c1.5-0.3,3.1-0.4,4.6-0.4c2.2,0,4.3,0.3,6.3,0.7C70.7,66.3,69.4,64.3,68.3,62.2"/>
+						</svg>
+					</div>
 					<?php if(get_field('about_title')): ?>
 						<h2 class="section-title"><?php the_field( 'about_title' ); ?></h2>
 					<?php endif; ?>
@@ -167,7 +181,7 @@
 						</div>
 					<?php endif; ?>
 					<?php if($about_button = get_field('about_button')): ?>
-						<a href="<?php echo $about_button['url']; ?>" target="<?php echo $about_button['target']; ?>" class="button"><?php echo $about_button['title']; ?></a>
+						<a href="<?php echo $about_button['url']; ?>" target="<?php echo $about_button['target']; ?>" class="button ghost"><?php echo $about_button['title']; ?></a>
 					<?php endif; ?>
 				</div>
 			</section>

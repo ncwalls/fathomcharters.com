@@ -1,6 +1,7 @@
 .home {
 	.section-title{
 		font-size: 4.6rem;
+		margin-top: 0;
 		
 		@media (max-width: $mobile) {
 			font-size: 3.8rem;
@@ -154,6 +155,9 @@
 	text-align: center;
 	padding: 10rem 0;
 	position: relative;
+	// display: flex;
+	// justify-content: center;
+	// align-items: center;
 	
 	@media (max-width: $mobile) {
 		padding: 7rem 0;
@@ -407,4 +411,196 @@
 .home-destinations{
 	padding: 10rem 0 0 0;
 	text-align: center;
+
+	.container{
+		max-width: 108.4rem;
+	}
+
+	.section-content{
+		margin: 0 auto;
+		max-width: 74rem;
+	}
+
+	.destinations-slider{
+		border: 1px solid $brand-bluegreen;
+		
+		@media (max-width: $mobile) {
+			margin: 0 auto;
+			width: 90%;
+		}
+
+		.slick-arrow{
+			background: none;
+			border: 0;
+			display: block;
+			padding: 0;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 1.9rem;
+			height: 5.8rem;
+			z-index: 5;
+			
+			@media (max-width: $phablet) {
+				width: 1.5rem;
+				height: 5rem;
+			}
+
+			svg{
+				display: block;
+				width: 100%;
+				height: 100%;
+
+				path,
+				polygon{
+					fill: $brand-gold;
+				}
+			}
+
+			&.slick-prev{
+				left: -5rem;
+				
+				@media (max-width: $laptop) {
+					left: -3.5rem;
+				}
+				@media (max-width: $phablet) {
+					left: -2.5rem;
+				}
+			}
+			&.slick-next{
+				right: -5rem;
+				
+				@media (max-width: $laptop) {
+					right: -3.5rem;
+				}
+				@media (max-width: $phablet) {
+					right: -2.5rem;
+				}
+			}
+		}
+
+		.slide{
+			padding: 2.8rem;
+			
+			@media (max-width: $phablet) {
+				padding: 2rem;
+			}
+			@media (max-width: $mobile) {
+				padding: 1rem;
+			}
+		}
+
+		.image{
+			margin-bottom: 2.5rem;
+			width: 100%;
+
+			.img{
+				background: no-repeat center;
+				background-size: cover;
+				box-shadow: 0 1rem 1.8rem rgba(0,0,0,0.5);
+				padding-bottom: 41%;
+				width: 100%;
+				
+				@media (max-width: $mobile) {
+					padding-bottom: 50%;
+				}
+				
+				@media (max-width: $phablet) {
+					box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.4);
+				}
+			}
+		}
+
+		.content{
+			font-size: 1.4rem;
+			margin: 0 auto;
+			max-width: 94rem;
+
+			p:last-child{
+				margin-bottom: 0;
+			}
+		}
+		.title{
+			font-size: 3.6rem;
+			margin: 0 0 1rem 0;
+			
+			@media (max-width: $mobile) {
+				font-size: 2.8rem;
+			}
+		}
+	}
+
+	.button{
+		margin-top: 2.8rem;
+	}
+}
+
+.home-about{
+	background: #000;
+	color: $brand-gold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 10rem;
+	min-height: 66rem;
+	padding: 5rem 0;
+	position: relative;
+	text-align: center;
+
+	.bg{
+		background: no-repeat center;
+		background-size: cover;
+		opacity: 0.15;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+	}
+
+	.container{
+		// max-width: 75rem;
+		position: relative;
+		z-index: 5;
+	}
+
+	.icon{
+		margin: 0 auto 1rem auto;
+		width: 7.2rem;
+		
+		@media (max-width: $phablet) {
+			width: 6rem;
+			
+		}
+		@media (max-width: $mobile) {
+			width: 5rem;
+		}
+
+		svg{
+			display: block;
+			width: 100%;
+			height: auto;
+
+			path{
+				fill: $brand-gold;
+			}
+		}
+	}
+
+	.section-title{
+		font-size: 5.5rem;
+		margin-top: 0;
+		
+		@media (max-width: $phablet) {
+			font-size: 4.5rem;
+		}
+		@media (max-width: $mobile) {
+			font-size: 4rem;
+		}
+	}
+
+	.button{
+		margin-top: 3rem;
+	}
 }
