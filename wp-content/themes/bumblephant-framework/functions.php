@@ -95,8 +95,8 @@ class MakespaceFramework {
 
 		// Universal Shortcodes
 		add_shortcode( 'protected_email', array( $this, 'sc_protected_email' ) );
-		add_shortcode( 'makespace_sitemap', array( $this, 'sc_makespace_sitemap' ) );
-		add_shortcode( 'makespace_button', array( $this, 'sc_makespace_button' ) );
+		add_shortcode( 'sitemap', array( $this, 'sc_makespace_sitemap' ) );
+		// add_shortcode( 'makespace_button', array( $this, 'sc_makespace_button' ) );
 		add_shortcode( 'year', array( $this, 'sc_display_year' ) );
 
 		// Universal Cleanup

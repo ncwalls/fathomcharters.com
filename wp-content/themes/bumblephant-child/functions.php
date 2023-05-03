@@ -614,3 +614,13 @@ function yacht_features_sc($atts){
 		return $yacht_html;
 	}
 }
+
+
+/* redirect everything to home page */
+// add_action( 'template_redirect', 'redirect_to_homepage' );
+// function redirect_to_homepage() {
+// 	$homepage_id = get_option('page_on_front');
+// 	if ( ! is_page( $homepage_id ) ) {
+// 		wp_redirect( home_url() ); 
+// 	}    
+// }
