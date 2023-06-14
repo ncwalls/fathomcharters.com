@@ -3,7 +3,11 @@
 	<?php while( have_posts() ): the_post(); ?>
 		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 			<div class="hero">
-				<?php if($hero_bg = get_field('hero_image')): ?>
+				<?php if($hero_video = get_field('hero_video')): ?>
+					<div class="hero-video-wrap">
+						<video src="<?php echo $hero_video['url']; ?>" id="hero-video" autoplay muted loop playsinline></video>
+					</div>
+				<?php elseif($hero_bg = get_field('hero_image')): ?>
 					<div class="bg" style="background-image:url(<?php echo $hero_bg['url']; ?>);"></div>
 				<?php endif; ?>
 				

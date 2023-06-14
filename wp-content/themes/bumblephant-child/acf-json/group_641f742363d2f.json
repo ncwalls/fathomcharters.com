@@ -81,6 +81,26 @@
             "preview_size": "medium"
         },
         {
+            "key": "field_6488e5e5d7ba6",
+            "label": "Hero Video",
+            "name": "hero_video",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_642764abc1b92",
             "label": "Intro",
             "name": "",
@@ -596,5 +616,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1680304575
+    "modified": 1686693632
 }
