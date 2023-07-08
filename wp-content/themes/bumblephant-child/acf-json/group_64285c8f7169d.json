@@ -54,7 +54,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "30",
                         "class": "",
                         "id": ""
                     },
@@ -75,7 +75,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "30",
                         "class": "",
                         "id": ""
                     },
@@ -87,11 +87,11 @@
                     "parent_repeater": "field_64285e42157b3"
                 },
                 {
-                    "key": "field_64286049157b7",
-                    "label": "Name",
-                    "name": "name",
+                    "key": "field_64a9877d42279",
+                    "label": "Location",
+                    "name": "location",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "google_map",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -100,84 +100,10 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_64285e42157b3"
-                },
-                {
-                    "key": "field_64286082157b9",
-                    "label": "Position X",
-                    "name": "position_x",
-                    "aria-label": "",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "20",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "min": "",
-                    "max": "",
-                    "placeholder": "",
-                    "step": "",
-                    "prepend": "",
-                    "append": "%",
-                    "parent_repeater": "field_64285e42157b3"
-                },
-                {
-                    "key": "field_64286066157b8",
-                    "label": "Position Y",
-                    "name": "position_y",
-                    "aria-label": "",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "20",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "min": "",
-                    "max": "",
-                    "placeholder": "",
-                    "step": "",
-                    "prepend": "",
-                    "append": "%",
-                    "parent_repeater": "field_64285e42157b3"
-                },
-                {
-                    "key": "field_6428786f2b02d",
-                    "label": "Icon Side",
-                    "name": "icon_side",
-                    "aria-label": "",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "20",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "left": "left",
-                        "right": "right"
-                    },
-                    "default_value": false,
-                    "return_format": "value",
-                    "multiple": 0,
-                    "allow_null": 0,
-                    "ui": 0,
-                    "ajax": 0,
-                    "placeholder": "",
+                    "center_lat": "",
+                    "center_lng": "",
+                    "zoom": "",
+                    "height": "",
                     "parent_repeater": "field_64285e42157b3"
                 }
             ]
@@ -282,5 +208,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1680373991
+    "modified": 1688841300
 }

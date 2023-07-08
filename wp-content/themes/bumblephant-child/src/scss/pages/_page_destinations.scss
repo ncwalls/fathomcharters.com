@@ -45,6 +45,7 @@
 		content: '';
 		display: block;
 		height: 3.2rem;
+		pointer-events: none;
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -57,6 +58,7 @@
 		content: '';
 		display: block;
 		height: 1.8rem;
+		pointer-events: none;
 		position: absolute;
 		bottom: 0;
 		right: 0;
@@ -95,10 +97,10 @@
 	}
 
 	.locations{
-		// background: #fff;
-		padding: 6rem 0 6rem 5%;
+		background: #fff;
+		padding: 6rem 5%;
 		position: relative;
-		width: 35%;
+		width: 40%;
 		z-index: 5;
 		
 		@media (max-width: $tablet) {
@@ -107,25 +109,37 @@
 			width: 100%;
 		}
 		
-		&:before{
-			background: #fff;
-			content: '';
-			display: block;
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			width: 89%;
-			z-index: 1;
+		// &:before{
+		// 	background: #fff;
+		// 	content: '';
+		// 	display: block;
+		// 	position: absolute;
+		// 	top: 0;
+		// 	bottom: 0;
+		// 	left: 0;
+		// 	width: 89%;
+		// 	z-index: 1;
 			
-			@media (max-width: $tablet) {
-				display: none;
-				// right: 0;
-				// bottom: auto;
-				// height: 90%;
-				// width: 100%;
-			}
-		}
+		// 	@media (max-width: $tablet) {
+		// 		display: none;
+		// 		// right: 0;
+		// 		// bottom: auto;
+		// 		// height: 90%;
+		// 		// width: 100%;
+		// 	}
+		// }
+
+		// &:after{
+		// 	background: linear-gradient(90deg, #fff, $brand-blue-lt);
+		// 	content: '';
+		// 	display: block;
+		// 	position: absolute;
+		// 	top: 0;
+		// 	right: 0;
+		// 	bottom: 0;
+		// 	width: 100%;
+		// 	z-index: 1;
+		// }
 
 		.inner{
 			position: relative;
@@ -190,147 +204,183 @@
 				display: none;
 				font-size: 1.4rem;
 				font-weight: 400;
-				padding: 0 0 0 0.5rem;
+				padding: 1rem 0 0 0.7rem;
 			}
 		}
 	}
 	.map{
 		position: relative;
-		// width: 46%;
-		width: 65%;
+		width: 60%;
 		z-index: 5;
 		
 		@media (max-width: $tablet) {
 			width: 100%;
 
-			&:before{
-				background: linear-gradient(#fff, rgba(#fff,0));
-				content: '';
-				display: block;
-				height: 40%;
-				position: absolute;
-				top: 0;
-				right: 0;
-				left: 0;
-				z-index: 1;
-			}
+			// &:before{
+			// 	background: linear-gradient(#fff, rgba(#fff,0));
+			// 	content: '';
+			// 	display: block;
+			// 	height: 40%;
+			// 	position: absolute;
+			// 	top: 0;
+			// 	right: 0;
+			// 	left: 0;
+			// 	z-index: 1;
+			// }
 			
-			&:after{
-				background: linear-gradient(#000, rgba(#000,0));
-				content: '';
-				display: block;
-				height: 3rem;
-				opacity: 0.2;
-				position: absolute;
-				top: 0;
-				right: 0;
-				left: 0;
-				z-index: 3;
-			}
+			// &:after{
+			// 	background: linear-gradient(#000, rgba(#000,0));
+			// 	content: '';
+			// 	display: block;
+			// 	height: 3rem;
+			// 	opacity: 0.2;
+			// 	position: absolute;
+			// 	top: 0;
+			// 	right: 0;
+			// 	left: 0;
+			// 	z-index: 3;
+			// }
 		}
 
-		.map-img{
-			margin: 0 auto;
-			position: relative;
-			width: 72%;
-			z-index: 2;
+		// .map-img{
+		// 	margin: 0 auto;
+		// 	position: relative;
+		// 	width: 72%;
+		// 	z-index: 2;
 			
-			@media (max-width: $mobile) {
-				width: 100%;
-			}
+		// 	@media (max-width: $mobile) {
+		// 		width: 100%;
+		// 	}
 
-			img{
-				display: block;
-				width: 100%;
-			}
-		}
+		// 	img{
+		// 		display: block;
+		// 		width: 100%;
+		// 	}
+		// }
 
-		.map-locations{
-			list-style: none;
-			margin: 0;
-			padding: 0;
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
+		// .map-locations{
+		// 	list-style: none;
+		// 	margin: 0;
+		// 	padding: 0;
+		// 	position: absolute;
+		// 	top: 0;
+		// 	right: 0;
+		// 	bottom: 0;
+		// 	left: 0;
 
-			.location{
-				cursor: pointer;
-				position: absolute;
-				transform: translate(-50%, -50%);
+		// 	.location{
+		// 		cursor: pointer;
+		// 		position: absolute;
+		// 		transform: translate(-50%, -50%);
 
-				&.left{
-					.icon{
-					}
-					.name{
-						right: 0;
-						padding-right: 4rem;
-					}
-				}
-				&.right{
+		// 		&.left{
+		// 			.icon{
+		// 			}
+		// 			.name{
+		// 				right: 0;
+		// 				padding-right: 4rem;
+		// 			}
+		// 		}
+		// 		&.right{
 
-					.icon{
-					}
-					.name{
-						left: 0;
-						padding-left: 4rem;
-					}
-				}
+		// 			.icon{
+		// 			}
+		// 			.name{
+		// 				left: 0;
+		// 				padding-left: 4rem;
+		// 			}
+		// 		}
 
-				&:hover{
-					.name{
-						// color: $brand-blue-lt;
-						text-decoration: underline;
-					}
-				}
+		// 		&:hover{
+		// 			.name{
+		// 				// color: $brand-blue-lt;
+		// 				text-decoration: underline;
+		// 			}
+		// 		}
 
-				.icon{
-					background: $brand-grey;
-					border-radius: 50%;
-					box-shadow: 0 0.7rem 0.9rem rgba(0,0,0,0.5);
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					width: 3.2rem;
-					height: 3.2rem;
+		// 		.icon{
+		// 			background: $brand-grey;
+		// 			border-radius: 50%;
+		// 			box-shadow: 0 0.7rem 0.9rem rgba(0,0,0,0.5);
+		// 			display: flex;
+		// 			align-items: center;
+		// 			justify-content: center;
+		// 			width: 3.2rem;
+		// 			height: 3.2rem;
 
-					svg{
-						display: block;
-						margin: 0 auto;
-						width: 1.8rem;
-						height: 2.8rem;
+		// 			svg{
+		// 				display: block;
+		// 				margin: 0 auto;
+		// 				width: 1.8rem;
+		// 				height: 2.8rem;
 
-						path{
-							fill: $brand-gold;
-						}
-					}
-				}
+		// 				path{
+		// 					fill: $brand-gold;
+		// 				}
+		// 			}
+		// 		}
 
-				.name{
-					color: $brand-blue-drk;
-					font-size: 1.5rem;
-					font-weight: 500;
-					position: absolute;
-					top: 50%;
-					text-transform: uppercase;
-					transform: translateY(-50%);
-					white-space: nowrap;
+		// 		.name{
+		// 			color: $brand-blue-drk;
+		// 			font-size: 1.5rem;
+		// 			font-weight: 500;
+		// 			position: absolute;
+		// 			top: 50%;
+		// 			text-transform: uppercase;
+		// 			transform: translateY(-50%);
+		// 			white-space: nowrap;
 					
-					@media (max-width: $desktop) {
-						font-size: 1.4rem;
-					}
-					@media (max-width: $laptop) {
-						font-size: 1.2rem;
-					}
-					@media (max-width: $phablet) {
-						font-size: 1.1rem;
-					}
-					@media (max-width: $mobile) {
-						display: none;
-					}
-				}
-			}
+		// 			@media (max-width: $desktop) {
+		// 				font-size: 1.4rem;
+		// 			}
+		// 			@media (max-width: $laptop) {
+		// 				font-size: 1.2rem;
+		// 			}
+		// 			@media (max-width: $phablet) {
+		// 				font-size: 1.1rem;
+		// 			}
+		// 			@media (max-width: $mobile) {
+		// 				display: none;
+		// 			}
+		// 		}
+		// 	}
+		// }
+	}
+}
+
+#destination-map{
+	height: 100%;
+	min-height: 50rem;
+	position: relative;
+	width: 100%;
+
+
+	// &:before{
+	// 	background: linear-gradient(90deg, #fff, rgba(#fff,0));
+	// 	content: '';
+	// 	display: block;
+	// 	position: absolute;
+	// 	top: 0;
+	// 	bottom: 0;
+	// 	left: 0;
+	// 	width: 30%;
+	// 	z-index: 1;
+	// }
+
+	.marker-content{
+		padding: 1rem;
+		// max-width: 30rem;
+
+		h3{
+			font-family: $font-family-base;
+			font-size: 1.7rem;
+			font-weight: 400;
+			margin: 0;
+			// text-transform: uppercase;
+		}
+		p{
+			line-height: 1.3;
+			margin: 0.5rem 0 0 0;
 		}
 	}
 }

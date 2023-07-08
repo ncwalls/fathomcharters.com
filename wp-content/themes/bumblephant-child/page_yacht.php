@@ -2,7 +2,7 @@
 	
 	<?php while( have_posts() ): the_post(); ?>
 
-		<article <?php post_class($page_class); ?> id="post-<?php the_ID(); ?>">
+		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 			<div class="container">
 
@@ -50,18 +50,20 @@
 				</div>
 			</div>
 
-			<div class="yacht-slider">
-				<?php while(have_rows('yacht_slider')): the_row(); ?>
-					<figure class="slide">
-						<?php if(get_sub_field('image')): ?>
-							<img class="img" src="<?php echo get_sub_field('image')['sizes']['large']; ?>" alt="">
-						<?php endif; ?>
-						<?php if(get_sub_field('caption')): ?>
-							<figcaption class="caption"><?php the_sub_field('caption'); ?></figcaption>
-						<?php endif; ?>
-					</figure>
-				<?php endwhile; ?>
-			</div>
+			<?php if(have_rows('yacht_slider')): ?>
+				<div class="yacht-slider">
+					<?php while(have_rows('yacht_slider')): the_row(); ?>
+						<figure class="slide">
+							<?php if(get_sub_field('image')): ?>
+								<img class="img" src="<?php echo get_sub_field('image')['sizes']['large']; ?>" alt="">
+							<?php endif; ?>
+							<?php if(get_sub_field('caption')): ?>
+								<figcaption class="caption"><?php the_sub_field('caption'); ?></figcaption>
+							<?php endif; ?>
+						</figure>
+					<?php endwhile; ?>
+				</div>
+			<?php endif; ?>
 
 		</article>
 

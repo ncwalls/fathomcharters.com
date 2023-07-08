@@ -122,8 +122,9 @@ class MakespaceChild {
 		}
 
 		if ( get_field( 'default_google_map_api_key', 'option' ) ) :
-			$google_api_key = 'https://maps.googleapis.com/maps/api/js?key=' . get_field( 'default_google_map_api_key', 'option' );
-			wp_enqueue_script('google-maps', $google_api_key, true);
+			$google_api_key = get_field( 'default_google_map_api_key', 'option' );
+			$google_api_script = 'https://maps.googleapis.com/maps/api/js?key=' . $google_api_key . '&callback=Function.prototype';
+			wp_enqueue_script('google-maps', $google_api_script, true);
 		endif;
 
 		wp_enqueue_script( 'theme', get_stylesheet_directory_uri() . '/scripts.min.js', array( 'jquery' ), filemtime( get_stylesheet_directory() . '/scripts.min.js' ) );

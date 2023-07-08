@@ -2,7 +2,7 @@
 	
 	<?php while( have_posts() ): the_post(); ?>
 		
-		<article <?php post_class($page_class); ?> id="post-<?php the_ID(); ?>">
+		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 			<div class="main-content">
 				<div class="container">
 
@@ -24,7 +24,7 @@
 						<ul class="locations-list">
 							<?php $location_count = 0; while(have_rows('locations')): the_row(); $location_count++; ?>
 								<li class="<?php echo get_sub_field('content') ? 'has-content' : '' ?>" id="location-item-<?php echo $location_count; ?>">
-									<h3 class="title" data-action="destination-location"><?php the_sub_field('title'); ?></h3>
+									<h3 class="title" data-action="destination-location" data-markerid="marker-<?php echo $location_count; ?>"><?php the_sub_field('title'); ?></h3>
 									<?php if(get_sub_field('content')): ?>
 										<div class="content"><?php the_sub_field('content'); ?></div>
 									<?php endif; ?>
@@ -34,6 +34,20 @@
 					</div>
 				</div>
 				<div class="map">
+					<div id="destination-map" data-marker="<?php echo get_stylesheet_directory_uri(); ?>/assets/marker.png">
+						<?php $location_count = 0; while(have_rows('locations')): the_row(); $location_count++; ?>
+				            <?php
+				           		$location = get_sub_field('location');
+				            ?>
+				            <div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>" data-id="marker-<?php echo $location_count; ?>">
+				            	<div class="marker-content">
+					                <h3><?php the_sub_field('title'); ?></h3>
+					                <?php //the_sub_field('content'); ?>
+					            </div>
+				            </div>
+						<?php endwhile; ?>
+					</div>
+					<?php /* ?>
 					<div class="map-img">
 						<?php if(get_field('map_image')): ?>
 							<img src="<?php echo get_field('map_image')['url']; ?>" alt="">
@@ -52,11 +66,19 @@
 												c1.5-0.3,3.1-0.4,4.6-0.4c2.2,0,4.3,0.3,6.3,0.7C70.7,66.3,69.4,64.3,68.3,62.2"/>
 										</svg>
 									</div>
-									<div class="name"><?php the_sub_field('name'); ?></div>
+									<?php 
+										// $name_x = 0;
+										$name_y = 50;
+										
+										if(get_sub_field('map_title_offset_y')){
+											$name_y = 50 - get_sub_field('map_title_offset_y');
+										}
+									?>
+									<div class="name" style="top: <?php echo $name_y; ?>%"><span><?php the_sub_field('title'); ?></span></div>
 								</li>
 							<?php endwhile; ?>
 						</ul>
-					</div>
+					</div> */ ?>
 				</div>
 			</section>
 
